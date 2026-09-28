@@ -1,0 +1,28 @@
+{
+  "name": "todolist-murilo-api",
+  "version": "1.0.0",
+  "description": "API de lista de tarefas desenvolvida com Fastify e MySQL.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "fastify",
+    "mysql",
+    "todolist",
+    "api"
+  ],
+  "author": "Nicolas Furtado",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "fastify": "^5.0.0",
+    "mysql2": "^3.11.0",
+    "node": "^26.9.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

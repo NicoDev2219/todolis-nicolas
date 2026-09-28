@@ -1,0 +1,57 @@
+### Projeto TodoList - Murilo Oliveira
+### Testes rápidos das rotas da API
+
+### Página inicial / identificação
+GET http://localhost:3333/
+
+### Verificar se o servidor está online
+GET http://localhost:3333/health
+
+### Listar todas as tarefas
+GET http://localhost:3333/api/tasks
+
+### Pesquisar tarefas por parte do título
+GET http://localhost:3333/api/tasks?search=prova
+
+### Mostrar somente tarefas pendentes
+GET http://localhost:3333/api/tasks?status=pending
+
+### Mostrar somente tarefas concluídas
+GET http://localhost:3333/api/tasks?status=completed
+
+### Cadastrar tarefa com prazo
+POST http://localhost:3333/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Revisar conteúdo da prova",
+  "dueDate": "2026-09-30"
+}
+
+### Cadastrar tarefa sem prazo
+POST http://localhost:3333/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Organizar atividades da semana"
+}
+
+### Marcar tarefa como concluída
+PATCH http://localhost:3333/api/tasks/1
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### Alterar título e prazo
+PATCH http://localhost:3333/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Finalizar revisão de Fastify",
+  "dueDate": "2026-10-02"
+}
+
+### Remover uma tarefa
+DELETE http://localhost:3333/api/tasks/1
